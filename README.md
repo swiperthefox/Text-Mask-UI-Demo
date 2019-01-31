@@ -1,6 +1,6 @@
 # text-mask-ui-demo
 
-> A demo of an UI element that show how visual feed back helps user experience.
+> A demo of an UI element that show how to use visual feed back to improve user experience.
 
 ## Build Setup
 

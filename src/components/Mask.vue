@@ -23,10 +23,12 @@
 
     <svg id="mask">
       <rect v-for="i in strips" v-bind="config(i)" :key="i"></rect>
-      <rect x="150" :y="startInPx + 'px'" height="1" width="650" style="fill: green"></rect>
-      <rect x="120" :y="(startInPx + heightInPx) + 'px'" height="1" width="680" style="fill: green"></rect>
-      <rect x="90" :y="(startInPx + heightInPx + gapInPx) + 'px'" height="1" width="710" style="fill: green"></rect>
-      <rect x="60" :y="(startInPx + (strips-1)*(heightInPx + gapInPx)) + 'px'" height="1" width="740" style="fill: green"></rect>
+      <g v-if="vertical">
+        <rect x="150" :y="startInPx + 'px'" height="1" width="650" style="fill: green"></rect>
+        <rect x="120" :y="(startInPx + heightInPx) + 'px'" height="1" width="680" style="fill: green"></rect>
+        <rect x="90" :y="(startInPx + heightInPx + gapInPx) + 'px'" height="1" width="710" style="fill: green"></rect>
+        <rect x="60" :y="(startInPx + (strips-1)*(heightInPx + gapInPx)) + 'px'" height="1" width="740" style="fill: green"></rect>
+      </g>
     </svg>
   </div>
 </template>
